@@ -8,7 +8,7 @@ app.set("views", "./views");
 var server = require("http").Server(app);
 var io = require("socket.io")(server);
 //server.listen(3000);
-server.listen(process.env.OPENSHIFT_NODEJS_PORT || 3000, function(){
+server.listen(process.env.OPENSHIFT_NODEJS_PORT || 80, function(){
   console.log('listening on', server.address().port);
 });
 
